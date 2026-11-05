@@ -1,0 +1,15 @@
+# Dependabot: security updates only, grouped per ecosystem.
+# open-pull-requests-limit: 0 disables version-update PRs; security updates are unaffected.
+# Docs: https://docs.github.com/code-security/dependabot/working-with-dependabot/dependabot-options-reference
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/requirements"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 0
+  groups:
+    pip-security-updates:
+      applies-to: security-updates
+      patterns:
+      - "*"
